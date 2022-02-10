@@ -5,8 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h1>Welcome To My Bank!</h1>
+<body class="bg-zinc-900">
+    <header>
+        <h1 class="text-4xl font-bold text-center mt-8 text-white">Welcome To <span class="text-orange-400">My Bank!</span></h1>
+    </header>
+    <main class=" w-3/4 mx-auto">
+        <!-- balance and transaction -->
+        <section class="mt-10">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-sky-500 p-16 rounded-md">
+                    <h3 class="text-2xl text-white">Deposit</h3>
+                    <h4 class="text-4xl text-white">$ <span id="deposit-total">00</span></h4>
+                </div>
+                <div class="bg-sky-400 p-10 rounded-md">
+                    <h3 class="text-2xl text-white">Widraw</h3>
+                    <h4 class="text-4xl text-white">$ <span id="widraw-total">00</span></h4>
+                </div>
+                <div class="bg-sky-600 p-10 rounded-md">
+                    <h3 class="text-2xl text-white">Balance</h3>
+                    <h4 class="text-4xl text-white">$ <span id="balance-total">1240</span></h4>
+                </div>
+            </div>
+        </section>
+        <!-- deposit and widraw -->
+        <section class="mt-10">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-zinc-400 rounded-md p-8">
+                    <h3 class="text-2xl mb-5 text-white">Please Deposit</h3>
+                    <div>
+                        <input id="deposit-input" class="border border-gray-300 rounded-md px-2  w-3/4 mb-4 block" type="text" placeholder="$ amount you want to deposit">
+                        <button id="deposit-button" class="bg-orange-500 hover:bg-orange-600 p-2 rounded text-white font-semibold">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-purple-400 rounded-md p-8">
+                    <h3 class="text-2xl mb-5 text-white">Please Widraw</h3>
+                    <div>
+                        <input id="widraw-input" class="border border-gray-200 rounded-md px-2  w-3/4 mb-4 block" type="text" placeholder="$ amount you want to widraw">
+                        <button id="widraw-button" class="bg-orange-500 hover:bg-orange-600 p-2 rounded text-white font-semibold">Widraw</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="banking.js"></script>
 </body>
 </html>
